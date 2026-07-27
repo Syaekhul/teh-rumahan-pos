@@ -1,16 +1,38 @@
-# React + Vite
+# POS Es Teh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi Point of Sale (POS) berbasis web untuk manajemen penjualan dan pengeluaran harian bisnis minuman. Proyek ini dikembangkan untuk keperluan pribadi.
 
-Currently, two official plugins are available:
+## Teknologi
+- Frontend: React (Vite)
+- Backend & Database: Supabase (PostgreSQL & Authentication)
+- Styling: Vanilla CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fitur Utama
+- **Manajemen Akses**: Terdiri dari dua peran pengguna (Owner dan Kasir).
+- **Verifikasi OTP**: Pengamanan login untuk akun kasir baru menggunakan kode OTP via email.
+- **Halaman Kasir**: Sistem pencatatan pesanan (keranjang), checkout (Tunai & QRIS/Transfer), cetak struk transaksi, dan pencatatan pengeluaran harian.
+- **Halaman Owner**: Dashboard analitik pendapatan, manajemen produk (tambah/edit/hapus), riwayat transaksi, laporan harian/bulanan yang dapat dicetak menjadi PDF, serta manajemen akun pengguna.
 
-## React Compiler
+## Cara Menjalankan Proyek
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone repositori ke komputer lokal:
+   ```bash
+   git clone [https://github.com/Syaekhul/teh-rumahan-pos.git](https://github.com/Syaekhul/teh-rumahan-pos.git)
+   ```
+2. Masuk ke direktori proyek:
+   ```bash
+   cd teh-rumahan-pos
+   ```
+3. Instal semua dependensi:
+   ```bash
+   npm install
+   ```
+4. Buat file .env di folder utama (root) dan tambahkan kredensial Supabase berikut:
+   ```bash
+   VITE_SUPABASE_URL=url_proyek_supabase_anda
+   VITE_SUPABASE_KEY=anon_key_supabase_anda
+   ```
+5. Jalankan Aplikasinya:
+   ```bash
+   npm run dev
+   ```
